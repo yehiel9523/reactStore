@@ -1,0 +1,29 @@
+img {
+    height: 100px;
+    border-radius: 5px;
+}
+
+.products {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 1px lightblue solid;
+    background-color: white;
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.products button {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(127, 255, 244);
+    border-color: white;
+    border-radius: 10px;
+}
