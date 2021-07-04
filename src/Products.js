@@ -1,37 +1,30 @@
-import './Products.css';
+// import './Product.css';
+import { CatalogContext } from './CatalogContext';
+import { useContext } from 'react';
 import { useEffect, useState } from "react";
+import Product from './Product';
 
-function Products({
-    category,
-    description,
-    id,
-    image,
-    title,
-    price }) {
-    // const [onePage, setOnePage] = useState(false);
-    // const [sProduct, setSProduct] = useState([]);
-    // useEffect(() => {
-    //     fetch(`https://fakestoreapi.com/products/${id}`)
-    //         .then(res => res.json())
-    //         .then(data => setSProduct(data));
-    //     console.log(sProduct);
-    // }, []);
+function Products() {
 
+    const { products } = useContext(CatalogContext);
     return (
-        <>
-            {/* {onePage === false ? */}
-            <div className='products'>
-                {/* <h2>{category}</h2> */}
-                {/* <h4 className="title">{title}</h4> */}
-                <img src={image} className="product-image" />
-                {/* <h6>{description}</h6> */}
-                <button>{price} $</button>
-                {/* <button onClick={() => setOnePage = true}>deatales</button> */}
-            </div>
-            {/* : <img src={sProduct.image} /> */}
+        <>{Array.isArray(products) && products.length > 0 ?
+
+            products.map(product => <Product {...product} />)
+            :
+            'louding...'}
+            {/*            
+            <div className='products' >
+                
+                <img src={image} />
+               
+                <button onClick={() => on(id)}>{price} $</button>
+                <button onClick={() => setOnePage = true}>deatales</button>
+            </div> */}
 
 
-            {/* } */}
+
+
         </>
     )
 

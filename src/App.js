@@ -1,26 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from "react";
 import Products from './Products';
+import { fireEvent } from '@testing-library/react';
+import Product from './Product';
+import CatalogProvider from './CatalogContext';
+import Cart from './Cart';
+import CartProvider from './CartContext';
+
 function App() {
-  console.log()
-  const [products, setProdacts] = useState([]);
-
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(data => setProdacts(data));
-    console.log(products);
-  }, []);
-
   return (
-    <div id="myApp">
-      {
+    <CatalogProvider>
+      <CartProvider>
+        <div id="myApp">
+          <Products />
+        </div>
+        <Cart />
+      </CartProvider>
+    </CatalogProvider>
 
-        products.map(product => <Products{...product} />)
-
-      }
-    </div>
   );
 }
 
