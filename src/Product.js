@@ -2,6 +2,7 @@ import './Product.css';
 import { CartContext } from './CartContext';
 import { useContext, useEffect, useState } from 'react';
 import { CatalogContext } from './CatalogContext';
+
 // import Cart from './Cart';
 
 export default function ({
@@ -18,7 +19,7 @@ export default function ({
     let lastCartLength = cart.length;
     useEffect(() => {
         if (onClick) {
-            fetch(`https://fakestoreapi.com/products/${id}`)
+            fetch(`/products/${id}`)
                 .then(res => res.json())
                 .then(data => setCart([...cart, data]))
             setOnclick('flase')
