@@ -43,14 +43,12 @@ function App() {
     <Router>
       <CatalogProvider>
         <CartProvider>
-          {/* <input ref={idRef} title='id' placeholder='id' />
+          <input ref={idRef} title='id' placeholder='id' />
           <input ref={titleRef} title='title' placeholder='title' />
           <input ref={priceRef} title="price" placeholder='price' />
           <input ref={imageRef} title='imageURL' placeholder='imageURL' />
-          <button onClick={() => addProduct()}>add product</button> */}
+          <button onClick={() => addProduct()}>add product</button>
 
-
-          {/* <Link to={`/cart`}><button>to the cart</button></Link> */}
           <Route path='/' exact>
 
             <div id="myApp">
