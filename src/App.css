@@ -1,5 +1,9 @@
 #myApp {
-    background-color: rgb(164, 255, 246);
+    position: relative;
+    background-color: rgb(127, 255, 244);
+}
+
+.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -14,12 +18,56 @@ h2 {
 .cart {
     background: rgb(127, 255, 244);
     display: flex;
-    padding: 20px;
+    /* padding: 20px; */
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .route {
+    background: rgba(127, 255, 244, 0.87);
+    /* border-radius: 10px; */
+    border-bottom: 1px solid black;
+    /* border-radius: 10px; */
+    /* background: linear-gradient(90deg, #89f7fe 0%, #66a6ff 100%); */
+    position: sticky;
+    top: 0px;
     width: 100vw;
 }
+
+button {
+    /* height: 50px;
+    width: 100px;
+    background-color: cornflowerblue; */
+    width: 80px;
+    border: 1px lightblue solid;
+    border-radius: 5px;
+    height: 50px;
+    background: rgb(127, 255, 244);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* border: 1px black solid;
+    height: 50px;
+    width: 100px;
+    background: rgb(127, 255, 244); */
+}
+
+input {
+    border: 1px lightblue solid;
+    height: 50px;
+    width: 500px;
+    background: rgb(127, 255, 244);
+    border-radius: 2px;
+    text-align: center;
+}
+
+header {}

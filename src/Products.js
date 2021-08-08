@@ -7,20 +7,32 @@ import Product from './Product';
 import {
     Link,
 } from "react-router-dom";
+import styled from 'styled-components';
+export const ButtonCart = styled.button`
+        height: 50px;
+        width: 100px;
+        margin:30px;
+        background-color: white;
+        border-radius:5px;
+        border-style: none;
+        position: relative;
+
+        `;
 
 function Products() {
 
     const { products } = useContext(CatalogContext);
     return (
-        <>
+        <div className="products">
             <div className='route'>
-                <Link to={`/cart`}><button>to the cart</button></Link>
+                <Link to={`/cart`}><ButtonCart> The Cart</ButtonCart></Link>
+                <Link to={`/addProduct`}><ButtonCart> Add Product</ButtonCart></Link>
             </div>
 
             {Array.isArray(products) && products.length > 0 ?
                 products.map(product => <Product {...product} />)
                 : 'louding...'}
-        </>
+        </div>
     )
 
 }

@@ -12,7 +12,7 @@ export default function ({
     image,
     title,
     price,
-    //  on 
+
 }) {
     const { cart, setCart } = useContext(CartContext);
     const [onClick, setOnclick] = useState(false);
@@ -22,6 +22,7 @@ export default function ({
             fetch(`/products/${id}`)
                 .then(res => res.json())
                 .then(data => setCart([...cart, data]))
+            console.log(cart)
             setOnclick('flase')
         }
 
@@ -29,13 +30,10 @@ export default function ({
     return (
         <div className='product' >
             <h2>{category}</h2>
-            {/* <h4 className="title">{title}</h4> */}
             <img src={image} />
-            {/* <h6>{description}</h6> */}
             <div>{price} $</div>
-            <button onClick={() => setOnclick(true)}>add to crat </button>
-            {/* <button onClick={on()}>go back</button> */}
-            {/* <button onClick={() => setOnePage = true}>deatales</button> */}
+            <button onClick={() => setOnclick(true)}>Add to crat </button>
+
         </div>
     )
 }
