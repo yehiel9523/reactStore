@@ -25,7 +25,9 @@ h2 {
 }
 
 .route {
+    display: flex;
     background: rgba(127, 255, 244, 0.87);
+    align-items: center;
     /* border-radius: 10px; */
     border-bottom: 1px solid black;
     /* border-radius: 10px; */
@@ -39,6 +41,7 @@ button {
     /* height: 50px;
     width: 100px;
     background-color: cornflowerblue; */
+    cursor: pointer;
     width: 80px;
     border: 1px lightblue solid;
     border-radius: 5px;
@@ -47,7 +50,7 @@ button {
     text-align: center;
 }
 
-form {
+.input {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -61,6 +64,18 @@ form {
     background: rgb(127, 255, 244); */
 }
 
+form.search input {
+    flex-grow: 1;
+    align-items: center;
+    /* height: 50px; */
+    /* width: 400px; */
+    /* margin: 30px; */
+    background-color: white;
+    /* border-radius: 5px;
+    border-style: none; */
+    /* position: relative; */
+}
+
 input {
     border: 1px lightblue solid;
     height: 50px;
@@ -71,3 +86,14 @@ input {
 }
 
 header {}
+
+h5 {
+    text-align: center;
+}
+
+
+/* a, */
+
+button {
+    cursor: pointer;
+}

@@ -53,14 +53,14 @@ function Input() {
             <div className='route'>
                 <Link to={`/`}><ButtonCart> Home</ButtonCart></Link>
             </div>
-            <form >
-                <input ref={idRef} title='id' placeholder='Id' />
+            <form className="input" >
+                {/* <input ref={idRef} title='id' placeholder='Id' /> */}
                 <input ref={titleRef} title='title' placeholder='Title' />
                 <input ref={priceRef} title="price" placeholder='Price' />
                 <input ref={imageRef} title='imageURL' placeholder='ImageURL' />
                 <button onClick={() => addProduct()}>Add</button>
-                <button onClick={() => deleteProduct()}>Delete</button>
-                <button onClick={() => editProduct()}>Edit</button>
+                {/* <button onClick={() => deleteProduct()}>Delete</button>
+                <button onClick={() => editProduct()}>Edit</button> */}
             </form>
         </>
     )

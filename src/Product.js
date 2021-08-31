@@ -8,7 +8,7 @@ import { CatalogContext } from './CatalogContext';
 export default function ({
     category,
     description,
-    id,
+    _id,
     image,
     title,
     price,
@@ -16,12 +16,15 @@ export default function ({
 }) {
     const { cart, setCart } = useContext(CartContext);
     const [onClick, setOnclick] = useState(false);
-    let lastCartLength = cart.length;
+    const [deatales, setDeatales] = useState(false);
     useEffect(() => {
         if (onClick) {
-            fetch(`/products/${id}`)
+            fetch(`/products/${_id}`)
                 .then(res => res.json())
-                .then(data => setCart([...cart, data]))
+                .then(data => {
+                    console.log(data);
+                    setCart([...cart, data])
+                })
             console.log(cart)
             setOnclick('flase')
         }
@@ -29,7 +32,7 @@ export default function ({
     }, [onClick])
     return (
         <div className='product' >
-            <h2>{category}</h2>
+            <h5>{title}</h5>
             <img src={image} />
             <div>{price} $</div>
             <button onClick={() => setOnclick(true)}>Add to crat </button>
